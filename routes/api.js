@@ -31,6 +31,9 @@ var APIRoutes = function (passport) {
 
   // Category
   router.get('/category', require('../controllers/categoryController').list);
+  router.get('/test', (req, res) => {
+    res.status(201).json({ success: true });
+  });
 
   // Video
   router.post('/video',
